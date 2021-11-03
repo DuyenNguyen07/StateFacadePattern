@@ -1,8 +1,8 @@
 package com.food.tool.cooktops;
 
-import com.food.tool.Stove;
+import com.food.tool.Cooker;
 
-public class InductionCooktop extends Stove {
+public class InductionCooktop extends Cooker {
     public static Integer MAX_HEAT = 8;
 
     private Integer CURRENT_HEAT_LEVEL;
