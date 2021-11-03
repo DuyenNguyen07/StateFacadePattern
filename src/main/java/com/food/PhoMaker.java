@@ -1,12 +1,12 @@
 package com.food;
 
-import com.food.tool.Stove;
+import com.food.tool.Cooker;
 
 public class PhoMaker implements FoodMaker {
 
-    public void cook(Stove stove) {
+    public void cook(Cooker cooker) {
         prepareIngredients();
-        boilPho(stove);
+        boilPho(cooker);
     }
 
     public void prepareIngredients() {
@@ -15,16 +15,16 @@ public class PhoMaker implements FoodMaker {
         System.out.println("Marinating beef...");
     }
 
-    public void boilPho(Stove stove) {
+    public void boilPho(Cooker cooker) {
         System.out.println("Turn on the cooktop...");
-        stove.pressPowerButton();   // turn on
+        cooker.pressPowerButton();   // turn on
         System.out.println("Heating up pot...");
-        stove.changeHeatLevel(7);
+        cooker.changeHeatLevel(7);
         System.out.println("Boiling broth, then turn down the heat...");
-        stove.changeHeatLevel(3);
+        cooker.changeHeatLevel(3);
         System.out.println("Putting noodle and beef in bowl...");
         System.out.println("Pouring broth into bowl...");
-        stove.pressPowerButton();   // turn off
+        cooker.pressPowerButton();   // turn off
         System.out.println("Pho is ready to serve.");
     }
 }

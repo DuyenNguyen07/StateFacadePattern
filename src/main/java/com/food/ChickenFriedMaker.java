@@ -1,12 +1,12 @@
 package com.food;
 
-import com.food.tool.Stove;
+import com.food.tool.Cooker;
 
 public class ChickenFriedMaker implements FoodMaker {
 
-    public void cook(Stove stove) {
+    public void cook(Cooker cooker) {
         prepareIngredients();
-        fryChicken(stove);
+        fryChicken(cooker);
     }
 
     public void prepareIngredients() {
@@ -15,14 +15,14 @@ public class ChickenFriedMaker implements FoodMaker {
         System.out.println("Marinating chicken...");
     }
 
-    public void fryChicken(Stove stove) {
+    public void fryChicken(Cooker cooker) {
         System.out.println("Turn on the cooktop...");
-        stove.pressPowerButton();   // turn on
+        cooker.pressPowerButton();   // turn on
         System.out.println("Heating up pan...");
-        stove.changeHeatLevel(6);
+        cooker.changeHeatLevel(6);
         System.out.println("Pouring oil...");
         System.out.println("Frying until the chicken is crispy...");
-        stove.pressPowerButton();   // turn off
+        cooker.pressPowerButton();   // turn off
 
         System.out.println("Chicken fried is ready to serve.");
     }

@@ -1,7 +1,7 @@
 package com.food;
 
-import com.food.tool.Stove;
+import com.food.tool.Cooker;
 
 public interface FoodMaker {
-    void cook(Stove stove);
+    void cook(Cooker cooker);
 }

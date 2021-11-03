@@ -1,6 +1,6 @@
 package com.food;
 
-import com.food.tool.Stove;
+import com.food.tool.Cooker;
 import com.food.tool.cooktops.InductionCooktop;
 
 public class FoodFacade {
@@ -8,25 +8,25 @@ public class FoodFacade {
     private FoodMaker phoMaker;
     private FoodMaker soupMaker;
 
-    private Stove stove;
+    private Cooker cooker;
 
     public FoodFacade() {
         this.chickenFriedMaker = new ChickenFriedMaker();
         this.phoMaker = new PhoMaker();
         this.soupMaker = new SoupMaker();
 
-        this.stove = new InductionCooktop();
+        this.cooker = new InductionCooktop();
     }
 
     public void cookChickenFried(){
-        chickenFriedMaker.cook(stove);
+        chickenFriedMaker.cook(cooker);
     }
 
     public void cookPho() {
-        phoMaker.cook(stove);
+        phoMaker.cook(cooker);
     }
 
     public void cookSoup() {
-        soupMaker.cook(stove);
+        soupMaker.cook(cooker);
     }
 }

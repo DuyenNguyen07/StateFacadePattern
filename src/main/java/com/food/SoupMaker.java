@@ -1,12 +1,12 @@
 package com.food;
 
-import com.food.tool.Stove;
+import com.food.tool.Cooker;
 
 public class SoupMaker implements FoodMaker {
 
-    public void cook(Stove stove) {
+    public void cook(Cooker cooker) {
         prepareIngredients();
-        boilSoup(stove);
+        boilSoup(cooker);
     }
 
     public void prepareIngredients() {
@@ -15,14 +15,14 @@ public class SoupMaker implements FoodMaker {
         System.out.println("Marinating meat...");
     }
 
-    public void boilSoup(Stove stove) {
+    public void boilSoup(Cooker cooker) {
         System.out.println("Turn on the cooktop...");
-        stove.pressPowerButton();   // turn on
+        cooker.pressPowerButton();   // turn on
         System.out.println("Put water into the pot & heat it up...");
-        stove.changeHeatLevel(5);
+        cooker.changeHeatLevel(5);
         System.out.println("Put the meat in, keep boiling...");
         System.out.println("Adding vegetables into the pot. Wait...");
-        stove.pressPowerButton();   // turn off
+        cooker.pressPowerButton();   // turn off
         System.out.println("Soup is ready to serve.");
     }
 }
